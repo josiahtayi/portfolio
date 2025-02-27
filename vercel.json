@@ -1,1 +1,6 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.js" }
+    ]
+  }
+  

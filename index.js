@@ -9,6 +9,12 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // Routes
+
+app.get("/", (req, res) => {
+    res.send("Portfolio is live!");
+  });
+  
+
 app.get("/", (req, res) => {
     res.render("index", { title: "Home", name: "Josiah Tayi" });
 });
