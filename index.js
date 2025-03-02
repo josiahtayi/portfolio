@@ -17,10 +17,6 @@ app.get("/", (req, res) => {
     res.render("index", { title: "Home", name: "Josiah Tayi" });
 });
 
-app.get("/about", (req, res) => {
-    res.render("about", { title: "About Me" });
-});
-
 app.get("/projects", (req, res) => {
     res.render("projects", { title: "Projects" });
 });

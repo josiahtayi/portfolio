@@ -3,25 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> | Portfolio</title>
+    <title><%= title %> | Josiah Tayi</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome, I'm <%= name %></h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </header>
-    <section>
-        <h2>My Work</h2>
-        <p>This is my portfolio homepage.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Josiah Tayi</p>
-    </footer>
+<header>
+    <h1>Welcome, I'm <%= name %></h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/projects">Projects</a>
+    </nav>
+</header>
+<section class="about-me">
+    <h2>About Me</h2>
+    <p>I'm Josiah Tayi, a recent Information Technology graduate with a passion for software development. During my
+        studies, I've developed a strong foundation in both front-end and back-end technologies, and I'm eager to apply
+        these skills in a professional setting.</p>
+    <p>I enjoy solving complex problems through code and am constantly learning new technologies to expand my skill set.
+        My academic projects have given me hands-on experience with real-world development challenges, preparing me for
+        an exciting career in tech.</p>
+</section>
+
+<section class="education">
+    <h2>Education</h2>
+    <div class="education-tag">
+        <h3>Bachelor of Information Technology</h3>
+        <p class="school">Royal Melbourne Institute of Technology</p>
+        <p class="date">2024-2025</p>
+        <ul>
+            <li>GPA 3.3</li>
+            <li>Relevant Coursework: Security in Computing and Information Technology, Web Development, Database
+                Systems, Further Programming
+            </li>
+            <li>Senior Project: Developed a responsive student management system using PHP and MySQL</li>
+        </ul>
+    </div>
+
+    <div class="education-tag">
+        <h3>Associate's Degree of Information Technology</h3>
+        <p class="school">Royal Melbourne Institute of Technology</p>
+        <p class="date">2022-2024</p>
+        <ul>
+            <li>GPA 3.3</li>
+            <li>Relevant Coursework: Operating Systems Administration, Cisco Networking, Software Engineering</li>
+        </ul>
+
+    </div>
+</section>
+
+<section class="coursework">
+    <h2>Technical Skills</h2>
+
+    <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <p>HTML/CSS, JavaScript, Python, Java, SQL, MongoDB</p>
+    </div>
+
+    <div class="skill-category">
+        <h3>Frameworks & Libraries</h3>
+        <p>React.js (basic), Node.js, Express.js, Bootstrap</p>
+    </div>
+
+    <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <p>Git/GitHub, VS Code, Unix,</p>
+    </div>
+
+    <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <p>Problem-Solving, Team Collaboration, Time Management, Communication, Quick Learner</p>
+    </div>
+</section>
+
+<section class="extracurricular">
+    <h2>Extracurricular Activities</h2>
+
+    <div class="activity-item">
+        <h3>Africans at RMIT Secretary</h3>
+        <p class="date">2023 - 2024</p>
+        <p>Organised multiple events and gatherings, collaborating with peers and outside institutions.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Josiah Tayi</p>
+    <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</footer>
 </body>
 </html>

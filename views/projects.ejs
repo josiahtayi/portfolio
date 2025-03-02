@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Josiah D Tayi</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -11,20 +11,249 @@
     <h1>My Projects</h1>
     <nav>
         <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/projects">Projects</a>
+        <a href="/projects" class="active">Projects</a>
         <a href="/contact">Contact</a>
     </nav>
 </header>
-<main>
-    <section>
-        <h2>Recent Projects</h2>
-        <ul>
-            <li><strong>Portfolio Website</strong> - A personal portfolio showcasing my skills and work.</li>
-            <li><strong>Bookstore App</strong> Online book management system using Java</li>
 
+<main class="projects-page">
+    <section class="projects-intro">
+        <h2>My Work</h2>
+        <p>Here's a collection of projects I've developed during my academic journey and personal learning time. Each
+            project represents different skills and technologies I've worked with.</p>
+    </section>
+
+    <section class="project-filters">
+        <h3>Filter by:</h3>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+    </section>
+
+    <section class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="academic web">
+            <div class="project-image">
+                <img src="/api/placeholder/400/250" alt="Student Management System Screenshot">
+            </div>
+            <div class="project-content">
+                <h3>Student Management System</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                </div>
+                <p class="project-description">A comprehensive web application developed as part of my final year
+                    project that helps educational institutions track student attendance, assignments, and grades.</p>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>User authentication with different access levels</li>
+                        <li>Automated attendance tracking system</li>
+                        <li>Assignment submission portal</li>
+                        <li>Grade calculation and reporting</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">View Demo</a>
+                    <a href="#" class="btn">GitHub Repository</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="personal web">
+            <div class="project-image">
+                <img src="/api/placeholder/400/250" alt="Personal Blog Screenshot">
+            </div>
+            <div class="project-content">
+                <h3>Personal Blog</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <p class="project-description">A responsive blog website I created to document my learning journey in
+                    web development and share insights about programming concepts I've learned.</p>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Responsive design for all device sizes</li>
+                        <li>Category filtering for posts</li>
+                        <li>Dark/light mode toggle</li>
+                        <li>Comment section for reader engagement</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">Visit Site</a>
+                    <a href="#" class="btn">GitHub Repository</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-category="personal web">
+            <div class="project-image">
+                <img src="/api/placeholder/400/250" alt="Weather App Screenshot">
+            </div>
+            <div class="project-content">
+                <h3>Weather App</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">API</span>
+                </div>
+                <p class="project-description">A simple application that fetches and displays weather data based on user
+                    location or city search, utilizing a third-party weather API.</p>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Geolocation for current user weather</li>
+                        <li>Search functionality for any city</li>
+                        <li>5-day forecast display</li>
+                        <li>Weather condition icons and temperature units toggle</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">Try It</a>
+                    <a href="#" class="btn">GitHub Repository</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-category="academic">
+            <div class="project-image">
+                <img src="/api/placeholder/400/250" alt="Data Analysis Project Screenshot">
+            </div>
+            <div class="project-content">
+                <h3>Data Analysis Tool</h3>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Matplotlib</span>
+                </div>
+                <p class="project-description">A Python-based data analysis tool developed for a coursework project that
+                    processes CSV data and generates insightful visualizations.</p>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>CSV data import and cleaning</li>
+                        <li>Statistical analysis functions</li>
+                        <li>Multiple visualization options</li>
+                        <li>Export results to PDF reports</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">View Demo</a>
+                    <a href="#" class="btn">GitHub Repository</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-category="personal">
+            <div class="project-image">
+                <img src="/api/placeholder/400/250" alt="To-Do App Screenshot">
+            </div>
+            <div class="project-content">
+                <h3>To-Do List Application</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">LocalStorage</span>
+                </div>
+                <p class="project-description">A simple but functional to-do list application that allows users to
+                    create, edit, and delete tasks with local browser storage.</p>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Task creation with due dates</li>
+                        <li>Priority levels and categories</li>
+                        <li>Persistent storage using localStorage</li>
+                        <li>Filter and sort options</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">Try It</a>
+                    <a href="#" class="btn">GitHub Repository</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="project-ideas">
+        <h2>Future Project Ideas</h2>
+        <p>Here are some projects I'm planning to work on next to continue expanding my skills:</p>
+        <ul class="ideas-list">
+            <li>
+                <strong>E-commerce Platform</strong> - A small-scale online store with product listings, shopping cart,
+                and checkout functionality
+            </li>
+            <li>
+                <strong>Social Media Dashboard</strong> - An analytics tool that visualizes engagement metrics across
+                different platforms
+            </li>
+            <li>
+                <strong>Recipe Finder App</strong> - An application that suggests recipes based on available ingredients
+            </li>
         </ul>
     </section>
+
+    <section class="collaboration">
+        <h2>Interested in Collaborating?</h2>
+        <p>I'm always open to working on interesting projects with other developers. If you have an idea or project
+            you'd like to collaborate on, feel free to reach out!</p>
+        <a href="/contact" class="btn primary-btn">Contact Me</a>
+    </section>
 </main>
+
+<footer>
+    <p>&copy; 2025 Josiah Tayi</p>
+    <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</footer>
+
+<script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                // Show/hide projects based on filter
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'flex';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>
