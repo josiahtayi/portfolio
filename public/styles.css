@@ -1,25 +1,157 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #f4f4f4;
+    color: #333;
 }
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
-}
-nav a {
-    margin: 0 15px;
-    color: white;
+
+a {
     text-decoration: none;
+    color: #007BFF;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* About Me Section */
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Education Section */
+.education-tag {
+    margin-bottom: 30px;
+}
+
+.education-tag h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.school, .date {
+    font-style: italic;
+    color: #555;
+}
+
+.education-tag ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.education-tag ul li {
+    margin-bottom: 10px;
+}
+
+/* Technical Skills Section */
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.skill-category p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Extracurricular Section */
+.activity-item {
+    margin-bottom: 20px;
+}
+
+.activity-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.activity-item .date {
+    color: #555;
+    font-style: italic;
+}
+
+.activity-item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Footer Styles */
 footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: #222;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
 }
 
 /* Contact Page */
