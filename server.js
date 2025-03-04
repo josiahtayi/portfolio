@@ -25,14 +25,6 @@ app.get("/contact", (req, res) => {
     res.render("contact", { title: "Contact Me" });
 });
 
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.post("/contact", (req, res) => {
-    console.log(req.body);
-    res.send("Thank you for reaching out!");
-});
-
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
