@@ -18,38 +18,74 @@
 </header>
 <section class="about-me">
     <h2>About Me</h2>
-    <p>I'm Josiah Tayi, a recent Information Technology graduate with a passion for software development. During my
-        studies, I've developed a strong foundation in both front-end and back-end technologies, and I'm eager to apply
-        these skills in a professional setting.</p>
-    <p>I enjoy solving complex problems through code and am constantly learning new technologies to expand my skill set.
-        My academic projects have given me hands-on experience with real-world development challenges, preparing me for
-        an exciting career in tech.</p>
+    <p>Full-stack developer and recent RMIT IT graduate who has built and shipped production web applications end-to-end
+        — front-end, back-end APIs, role-based authentication, payments, and relational databases. Strong in TypeScript
+        on the Next.js/Node.js stack with PostgreSQL, Azure-certified (AZ-900), and comfortable in Linux and
+        containerised environments. Motivated by solving practical, commercial problems in a collaborative,
+        cross-functional team.</p>
+</section>
+
+<section class="experience">
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Full-Stack Developer</h3>
+            <span class="date">2026</span>
+        </div>
+        <p class="company">FinSeeker.com.au</p>
+        <p class="experience-desc">B2B commercial-lending matchmaking platform connecting Australian finance seekers with lender Business Development Managers.</p>
+        <ul>
+            <li>Designed and implemented a dual-portal architecture (seeker portal + lender dashboard) with role-based auth using Better Auth and magic-link email flows.</li>
+            <li>Integrated Supabase Realtime for live chat between seekers and lenders, enabling deal qualification before identity disclosure.</li>
+            <li>Built a Stripe subscription and credit-purchase system for lender access tiers, including webhook handling for lifecycle events.</li>
+            <li>Delivered transactional email notifications (pitch received, connection accepted, message digest) via Resend.</li>
+            <li>Covered 15+ commercial finance categories and 8 security types with a type-matched lender notification system.</li>
+        </ul>
+        <p class="stack"><strong>Stack:</strong> Next.js 15 (App Router), TypeScript, Tailwind CSS, Drizzle ORM, Supabase, Vercel</p>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>Software Development Intern</h3>
+            <span class="date">2025</span>
+        </div>
+        <p class="company">Vision Verse Interactive</p>
+        <p class="experience-desc">Quiz Builder Platform — a full-stack quiz creation and analytics product.</p>
+        <ul>
+            <li>Built a full-stack quiz creation and analytics platform with a drag-and-drop builder, supporting multiple scoring systems and reusable page templates.</li>
+            <li>Architected a JSONB-based quiz schema in PostgreSQL using Drizzle ORM, enabling flexible quiz structures with draft/publish versioning and participant response tracking.</li>
+            <li>Integrated Clerk (Google OAuth) for authentication and UploadThing for media uploads, enabling shareable quiz links with no participant registration required.</li>
+            <li>Implemented a real-time analytics dashboard with Recharts for visualising quiz performance, device breakdowns, and participant response data.</li>
+        </ul>
+        <p class="stack"><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL (Neon), Drizzle ORM, Clerk, Tailwind CSS, Vercel</p>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <h3>IT Support Intern</h3>
+            <span class="date">2024</span>
+        </div>
+        <p class="company">The Midlands Private Hospital</p>
+        <ul>
+            <li>Delivered Level 1/2 technical support in a clinical environment, logging and resolving tickets in ServiceNow.</li>
+            <li>Administered user accounts, access and devices via Active Directory and Microsoft 365.</li>
+            <li>Communicated clearly with non-technical staff to diagnose issues and minimise disruption to care delivery.</li>
+        </ul>
+    </div>
 </section>
 
 <section class="education">
     <h2>Education</h2>
     <div class="education-tag">
         <h3>Bachelor of Information Technology</h3>
-        <p class="school">Royal Melbourne Institute of Technology</p>
-        <p class="date">2024-2025</p>
+        <p class="school">RMIT University</p>
+        <p class="date">Graduated 2025</p>
         <ul>
-            <li>GPA 3.3</li>
-            <li>Relevant Coursework: Security in Computing and Information Technology, Web Development, Database
-                Systems, Further Programming
+            <li>Relevant Coursework: Programming 1 &amp; 2, Web Programming, Database Concepts, Software Engineering
+                Fundamentals, Data Communications, Professional Computing Practice, Security in Computing and IT
             </li>
-            <li>Senior Project: Developed a responsive student management system using PHP and MySQL</li>
         </ul>
-    </div>
-
-    <div class="education-tag">
-        <h3>Associate's Degree of Information Technology</h3>
-        <p class="school">Royal Melbourne Institute of Technology</p>
-        <p class="date">2022-2024</p>
-        <ul>
-            <li>GPA 3.3</li>
-            <li>Relevant Coursework: Operating Systems Administration, Cisco Networking, Software Engineering</li>
-        </ul>
-
     </div>
 </section>
 
@@ -57,23 +93,28 @@
     <h2>Technical Skills</h2>
 
     <div class="skill-category">
-        <h3>Programming Languages</h3>
-        <p>HTML/CSS, JavaScript, Python, Java, SQL, MongoDB</p>
+        <h3>Languages</h3>
+        <p>TypeScript, JavaScript, Python, SQL, HTML/CSS, Bash</p>
     </div>
 
     <div class="skill-category">
-        <h3>Frameworks & Libraries</h3>
-        <p>React.js (basic), Node.js, Express.js, Bootstrap</p>
+        <h3>Frameworks &amp; Libraries</h3>
+        <p>Next.js (App Router), React, Node.js, Tailwind CSS, Recharts</p>
     </div>
 
     <div class="skill-category">
-        <h3>Tools & Platforms</h3>
-        <p>Git/GitHub, VS Code, Unix, Azure Fundamentals</p>
+        <h3>Databases &amp; ORM</h3>
+        <p>PostgreSQL (Supabase, Neon), Drizzle ORM, MongoDB</p>
     </div>
 
     <div class="skill-category">
-        <h3>Soft Skills</h3>
-        <p>Problem-Solving, Team Collaboration, Time Management, Communication, Quick Learner</p>
+        <h3>Cloud &amp; DevOps</h3>
+        <p>Microsoft Azure (AZ-900), Vercel CI/CD, Docker, Git, Linux</p>
+    </div>
+
+    <div class="skill-category">
+        <h3>Integrations &amp; Practices</h3>
+        <p>Stripe, Clerk, Better Auth, Resend, UploadThing, REST APIs, Agile</p>
     </div>
 </section>
 
@@ -85,6 +126,15 @@
         <p class="date">2023 - 2024</p>
         <p>Organised multiple events and gatherings, collaborating with peers and outside institutions.</p>
     </div>
+</section>
+
+<section class="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+        <li>Cisco Certified Network Associate (CCNA)</li>
+        <li>CompTIA A+</li>
+    </ul>
 </section>
 
 <footer>

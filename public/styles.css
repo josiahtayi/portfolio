@@ -126,6 +126,70 @@ section h2 {
     font-size: 1rem;
 }
 
+/* Experience Section */
+.experience-item {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.experience-header h3 {
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.company {
+    font-style: italic;
+    color: #555;
+    margin: 2px 0 6px;
+}
+
+.experience-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.experience-item ul li {
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.stack {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Certifications Section */
+.cert-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.cert-list li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
