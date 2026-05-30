@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %> | Josiah Tayi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <header>
-    <h1>Welcome, I'm <%= name %></h1>
+    <span class="nav-logo">Josiah <span>Tayi</span></span>
     <nav>
-        <a href="/">Home</a>
+        <a href="/" class="active">Home</a>
         <a href="/projects">Projects</a>
         <a href="/contact">Contact</a>
-
     </nav>
 </header>
+
+<section class="hero">
+    <div>
+        <p class="hero-eyebrow">Hi, I'm</p>
+        <h1 class="hero-name"><%= name %></h1>
+        <p class="hero-title">Full-Stack Software Developer</p>
+        <p class="hero-sub">TypeScript · Next.js · PostgreSQL · Melbourne, VIC</p>
+        <div class="hero-links">
+            <a href="/projects" class="btn btn-primary">View Projects</a>
+            <a href="/contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
 <section class="about-me">
     <h2>About Me</h2>
     <p>Full-stack developer and recent RMIT IT graduate who has built and shipped production web applications end-to-end
@@ -94,37 +110,60 @@
 
     <div class="skill-category">
         <h3>Languages</h3>
-        <p>TypeScript, JavaScript, Python, SQL, HTML/CSS, Bash</p>
+        <div class="chip-group">
+            <span class="chip">TypeScript</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Bash</span>
+        </div>
     </div>
 
     <div class="skill-category">
         <h3>Frameworks &amp; Libraries</h3>
-        <p>Next.js (App Router), React, Node.js, Tailwind CSS, Recharts</p>
+        <div class="chip-group">
+            <span class="chip">Next.js (App Router)</span>
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Recharts</span>
+        </div>
     </div>
 
     <div class="skill-category">
         <h3>Databases &amp; ORM</h3>
-        <p>PostgreSQL (Supabase, Neon), Drizzle ORM, MongoDB</p>
+        <div class="chip-group">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">Neon</span>
+            <span class="chip">Drizzle ORM</span>
+            <span class="chip">MongoDB</span>
+        </div>
     </div>
 
     <div class="skill-category">
         <h3>Cloud &amp; DevOps</h3>
-        <p>Microsoft Azure (AZ-900), Vercel CI/CD, Docker, Git, Linux</p>
+        <div class="chip-group">
+            <span class="chip">Microsoft Azure (AZ-900)</span>
+            <span class="chip">Vercel</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Git</span>
+            <span class="chip">Linux</span>
+        </div>
     </div>
 
     <div class="skill-category">
         <h3>Integrations &amp; Practices</h3>
-        <p>Stripe, Clerk, Better Auth, Resend, UploadThing, REST APIs, Agile</p>
-    </div>
-</section>
-
-<section class="extracurricular">
-    <h2>Extracurricular Activities</h2>
-
-    <div class="activity-item">
-        <h3>Africans at RMIT Secretary</h3>
-        <p class="date">2023 - 2024</p>
-        <p>Organised multiple events and gatherings, collaborating with peers and outside institutions.</p>
+        <div class="chip-group">
+            <span class="chip">Stripe</span>
+            <span class="chip">Clerk</span>
+            <span class="chip">Better Auth</span>
+            <span class="chip">Resend</span>
+            <span class="chip">UploadThing</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Agile</span>
+        </div>
     </div>
 </section>
 
@@ -135,6 +174,15 @@
         <li>Cisco Certified Network Associate (CCNA)</li>
         <li>CompTIA A+</li>
     </ul>
+</section>
+
+<section class="extracurricular">
+    <h2>Extracurricular</h2>
+    <div class="activity-item">
+        <h3>Africans at RMIT — Secretary</h3>
+        <p class="date">2023 – 2024</p>
+        <p>Organised multiple events and gatherings, collaborating with peers and outside institutions.</p>
+    </div>
 </section>
 
 <footer>

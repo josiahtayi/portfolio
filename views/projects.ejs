@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Josiah D Tayi</title>
+    <title>Projects | Josiah Tayi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <header>
-    <h1>My Projects</h1>
+    <span class="nav-logo">Josiah <span>Tayi</span></span>
     <nav>
         <a href="/">Home</a>
         <a href="/projects" class="active">Projects</a>
@@ -18,9 +21,8 @@
 
 <main class="projects-page">
     <section class="projects-intro">
-        <h2>My Work</h2>
-        <p>Here's a collection of projects I've developed during my academic journey and personal learning time. Each
-            project represents different skills and technologies I've worked with.</p>
+        <h2>Projects</h2>
+        <p>Production web applications and personal projects I've designed, built, and shipped end-to-end.</p>
     </section>
 
     <section class="project-filters">
@@ -28,124 +30,119 @@
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="academic">Academic</button>
             <button class="filter-btn" data-filter="personal">Personal</button>
         </div>
     </section>
 
     <section class="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card" data-category="personal web">
-            <div class="project-image">
-                <img src="/api/placeholder/400/250" alt="Personal Blog Screenshot">
-            </div>
+
+        <article class="project-card" data-category="web">
+            <div class="project-banner banner-1">FinSeeker</div>
             <div class="project-content">
-                <h3>Personal Blog</h3>
+                <h3>FinSeeker.com.au</h3>
                 <div class="project-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
+                    <span class="tag">Next.js 15</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">Drizzle ORM</span>
+                    <span class="tag">Stripe</span>
                 </div>
-                <p class="project-description">A responsive blog website I created to document my film bro hobby</p>
+                <p class="project-description">B2B commercial-lending matchmaking platform connecting Australian finance seekers (brokers, accountants, CFOs) with lender BDMs. Seekers post funding requests anonymously; lenders pitch with indicative rates and terms.</p>
                 <div class="project-features">
-                    <h4>Key Features:</h4>
+                    <h4>Key Features</h4>
                     <ul>
-                        <li>Responsive design for all device sizes</li>
-                        <li>Category filtering for posts</li>
-                        <li>Dark/light mode toggle</li>
-                        <li>Comment section for reader engagement</li>
+                        <li>Dual-portal architecture with role-based auth via Better Auth and magic-link email flows</li>
+                        <li>Supabase Realtime live chat — deal qualification before identity disclosure</li>
+                        <li>Stripe subscription &amp; credit-purchase system with webhook lifecycle handling</li>
+                        <li>Transactional emails via Resend across 15+ commercial finance categories</li>
                     </ul>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="btn">Visit Site</a>
-                    <a href="#" class="btn">GitHub Repository</a>
+                    <a href="https://finseeker.com.au" target="_blank" class="btn btn-primary">Visit Site</a>
                 </div>
             </div>
         </article>
 
-        <!-- Project 3 -->
-        <article class="project-card" data-category="academic">
-            <div class="project-image">
-                <img src="/api/placeholder/400/250" alt="Online Bookstore">
-            </div>
+        <article class="project-card" data-category="web">
+            <div class="project-banner banner-2">Quiz Builder</div>
             <div class="project-content">
-                <h3>Bookstore management</h3>
+                <h3>Vision Verse Quiz Builder</h3>
                 <div class="project-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Java Collections</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Clerk</span>
+                    <span class="tag">Recharts</span>
                 </div>
-                <p class="project-description">A Java based program for an online book management system </p>
+                <p class="project-description">Full-stack quiz creation and analytics platform built at Vision Verse Interactive. Supports drag-and-drop quiz building, multiple scoring systems, and shareable links with no participant registration required.</p>
                 <div class="project-features">
-                    <h4>Key Features:</h4>
+                    <h4>Key Features</h4>
                     <ul>
-                        <li>Database intergration</li>
-                        <li>Statistical analysis functions</li>
-                        <li>Multiple visualization options</li>
-                        <li>Export results to PDF reports</li>
+                        <li>Drag-and-drop builder with reusable page templates (onboarding, quiz, results)</li>
+                        <li>JSONB-based PostgreSQL schema with draft/publish versioning via Drizzle ORM</li>
+                        <li>Real-time analytics dashboard — device breakdowns, response data, performance</li>
+                        <li>Google OAuth via Clerk; media uploads (images/GIFs) via UploadThing</li>
                     </ul>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="btn">View Demo</a>
-                    <a href="#" class="btn">GitHub Repository</a>
+                    <a href="https://github.com/gpaa487/visionverse" target="_blank" class="btn">GitHub</a>
                 </div>
             </div>
         </article>
 
-        <!-- Project 5 -->
+        <article class="project-card" data-category="web personal">
+            <div class="project-banner banner-4">What Josiah Watched</div>
+            <div class="project-content">
+                <h3>What Josiah Watched</h3>
+                <div class="project-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">TMDB API</span>
+                    <span class="tag">Tailwind CSS</span>
+                </div>
+                <p class="project-description">Full-stack horror-film curation app with a cinematic admin dashboard for managing a personal watch history, auto-enriched with cast, director, poster, and runtime data via the TMDB API.</p>
+                <div class="project-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Real-time TMDB discovery — "Now in Cinemas" homepage &amp; "More Like This" on detail pages</li>
+                        <li>TypeScript bulk-import script with metadata enrichment and duplicate detection from CSV</li>
+                        <li>Secure admin interface with featured-film scheduling and watch-history tracking</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://whatjosiahwatched.vercel.app" target="_blank" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </article>
+
         <article class="project-card" data-category="personal">
-            <div class="project-image">
-                <img src="/api/placeholder/400/250" alt="To-Do App Screenshot">
-            </div>
+            <div class="project-banner banner-5">Home Lab</div>
             <div class="project-content">
-                <h3>To-Do List Application</h3>
+                <h3>Self-Hosted Home Infrastructure</h3>
                 <div class="project-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">LocalStorage</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Tailscale</span>
+                    <span class="tag">Networking</span>
                 </div>
-                <p class="project-description">A simple but functional to-do list application that allows users to
-                    create, edit, and delete tasks with local browser storage.</p>
+                <p class="project-description">Self-hosted media server and home network designed and maintained on Linux, demonstrating practical DevOps, networking, and containerisation skills.</p>
                 <div class="project-features">
-                    <h4>Key Features:</h4>
+                    <h4>Key Features</h4>
                     <ul>
-                        <li>Task creation with due dates</li>
-                        <li>Priority levels and categories</li>
-                        <li>Persistent storage using localStorage</li>
-                        <li>Filter and sort options</li>
+                        <li>Docker containers for service isolation and easy management</li>
+                        <li>VLAN segmentation for network security</li>
+                        <li>Secure remote access via Tailscale VPN</li>
                     </ul>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="btn">Try It</a>
-                    <a href="#" class="btn">GitHub Repository</a>
                 </div>
             </div>
         </article>
-    </section>
 
-    <section class="project-ideas">
-        <h2>Future Project Ideas</h2>
-        <p>Here are some projects I'm planning to work on next to continue expanding my skills:</p>
-        <ul class="ideas-list">
-            <li>
-                <strong>E-commerce Platform</strong> - A small-scale online store with product listings, shopping cart,
-                and checkout functionality
-            </li>
-            <li>
-                <strong>Social Media Dashboard</strong> - An analytics tool that visualizes engagement metrics across
-                different platforms
-            </li>
-            <li>
-                <strong>Recipe Finder App</strong> - An application that suggests recipes based on available ingredients
-            </li>
-        </ul>
     </section>
 
     <section class="collaboration">
         <h2>Interested in Collaborating?</h2>
-        <p>I'm always open to working on interesting projects with other developers. If you have an idea or project
-            you'd like to collaborate on, feel free to reach out!</p>
+        <p>I'm always open to working on interesting projects with other developers. If you have an idea you'd like to build together, feel free to reach out.</p>
         <a href="/contact" class="btn primary-btn">Contact Me</a>
     </section>
 </main>
@@ -160,30 +157,21 @@
 </footer>
 
 <script>
-    // Project filtering functionality
     document.addEventListener('DOMContentLoaded', function () {
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function () {
-                // Update active button
                 filterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-
                 const filter = this.getAttribute('data-filter');
-
-                // Show/hide projects based on filter
                 projectCards.forEach(card => {
                     if (filter === 'all') {
                         card.style.display = 'flex';
                     } else {
-                        const categories = card.getAttribute('data-category').split(' ');
-                        if (categories.includes(filter)) {
-                            card.style.display = 'flex';
-                        } else {
-                            card.style.display = 'none';
-                        }
+                        const cats = card.getAttribute('data-category').split(' ');
+                        card.style.display = cats.includes(filter) ? 'flex' : 'none';
                     }
                 });
             });
