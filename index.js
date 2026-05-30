@@ -25,6 +25,10 @@ app.get("/contact", (req, res) => {
     res.render("contact", { title: "Contact Me" });
 });
 
+app.get("/transcript", (req, res) => {
+    res.render("transcript", { title: "Academic Transcript" });
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

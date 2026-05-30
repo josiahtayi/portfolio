@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Transcript | Josiah Tayi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .transcript-section {
+            max-width: 860px;
+            margin: 1.25rem auto;
+        }
+
+        .degree-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .degree-meta h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+        .degree-meta p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .gpa-badge {
+            background: rgba(99,102,241,0.12);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: var(--accent-light);
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .transcript-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+
+        .transcript-table thead th {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            padding: 0 0.75rem 0.6rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .transcript-table thead th:last-child,
+        .transcript-table thead th:nth-last-child(2) {
+            text-align: center;
+        }
+
+        .transcript-table tbody tr {
+            border-bottom: 1px solid rgba(30,30,54,0.6);
+            transition: background var(--ease);
+        }
+
+        .transcript-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .transcript-table tbody tr:hover {
+            background: rgba(99,102,241,0.04);
+        }
+
+        .transcript-table td {
+            padding: 0.6rem 0.75rem;
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+
+        .year-cell {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.8rem;
+            width: 50px;
+        }
+
+        .mark-cell {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text);
+            width: 60px;
+        }
+
+        .grade-cell {
+            text-align: center;
+            width: 70px;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .grade-hd {
+            background: rgba(34,211,238,0.12);
+            border: 1px solid rgba(34,211,238,0.3);
+            color: #22d3ee;
+        }
+
+        .grade-di {
+            background: rgba(99,102,241,0.12);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: var(--accent-light);
+        }
+
+        .grade-cr {
+            background: rgba(251,191,36,0.1);
+            border: 1px solid rgba(251,191,36,0.3);
+            color: #fbbf24;
+        }
+
+        .grade-pa {
+            background: rgba(100,116,139,0.12);
+            border: 1px solid rgba(100,116,139,0.3);
+            color: #94a3b8;
+        }
+
+        .year-group-row td {
+            padding-top: 1.1rem;
+        }
+
+        details.credit-transfers {
+            margin-top: 1.25rem;
+        }
+
+        details.credit-transfers summary {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            user-select: none;
+            padding: 0.5rem 0;
+            border-top: 1px solid var(--border);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        details.credit-transfers summary::before {
+            content: '›';
+            font-size: 1rem;
+            transition: transform 0.15s ease;
+            display: inline-block;
+        }
+
+        details[open].credit-transfers summary::before {
+            transform: rotate(90deg);
+        }
+
+        .credit-list {
+            list-style: none;
+            padding: 0.75rem 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .credit-list li {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            max-width: 860px;
+            margin: 1.25rem auto 0;
+            padding: 0 2rem;
+            display: block;
+        }
+
+        .back-link:hover { color: var(--accent-light); }
+
+        .institution-line {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-align: right;
+            margin-top: 1.25rem;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <span class="nav-logo">Josiah <span>Tayi</span></span>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<a href="/" class="back-link">← Back to portfolio</a>
+
+<!-- Bachelor of IT -->
+<section class="transcript-section">
+    <div class="degree-header">
+        <div class="degree-meta">
+            <h3>Bachelor of Information Technology</h3>
+            <p>RMIT University &nbsp;·&nbsp; Completed 14 July 2025</p>
+        </div>
+        <span class="gpa-badge">GPA 3.1</span>
+    </div>
+
+    <table class="transcript-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Course</th>
+                <th>Mark</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="year-group-row">
+                <td class="year-cell">2024</td>
+                <td>Further Programming</td>
+                <td class="mark-cell">64</td>
+                <td class="grade-cell"><span class="grade-badge grade-cr">CR</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Security in Computing and Information Technology</td>
+                <td class="mark-cell">68</td>
+                <td class="grade-cell"><span class="grade-badge grade-cr">CR</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Database Applications</td>
+                <td class="mark-cell">86</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Software Engineering Project Management</td>
+                <td class="mark-cell">76</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr class="year-group-row">
+                <td class="year-cell">2025</td>
+                <td>Programming Project 1</td>
+                <td class="mark-cell">76</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Foundations of Artificial Intelligence for STEM</td>
+                <td class="mark-cell">85</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Cloud Security</td>
+                <td class="mark-cell">81</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Innovation Ecosystem and the Future of Work</td>
+                <td class="mark-cell">75</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <details class="credit-transfers">
+        <summary>Credit Transfers (15 courses)</summary>
+        <ul class="credit-list">
+            <li>Programming 1</li>
+            <li>Essentials of Information Technology</li>
+            <li>Data Communication and Net-Centric Computing</li>
+            <li>Introduction to Programming</li>
+            <li>Web Programming</li>
+            <li>Introduction to Computer Systems</li>
+            <li>Building IT Systems</li>
+            <li>User-centred Design</li>
+            <li>Approved Studies 1</li>
+            <li>Approved Studies 2</li>
+            <li>Approved Studies 3</li>
+            <li>Approved Studies 4</li>
+            <li>Approved Studies 5</li>
+            <li>Approved Studies 6</li>
+            <li>Practical Database Concepts</li>
+            <li>Software Engineering Fundamentals for IT</li>
+        </ul>
+    </details>
+</section>
+
+<!-- Associate Degree -->
+<section class="transcript-section">
+    <div class="degree-header">
+        <div class="degree-meta">
+            <h3>Associate Degree in Information Technology <em style="font-weight:500;color:var(--cyan);font-style:normal;">with Distinction</em></h3>
+            <p>RMIT University &nbsp;·&nbsp; Completed 3 July 2024</p>
+        </div>
+        <span class="gpa-badge">GPA 3.3</span>
+    </div>
+
+    <table class="transcript-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Course</th>
+                <th>Mark</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="year-group-row">
+                <td class="year-cell">2022</td>
+                <td>Workplace Communication A</td>
+                <td class="mark-cell">84</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Networking 1</td>
+                <td class="mark-cell">77</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Introduction to Computer Systems and Platform Technologies</td>
+                <td class="mark-cell">76</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>User-Centred Design</td>
+                <td class="mark-cell">78</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr class="year-group-row">
+                <td class="year-cell">2023</td>
+                <td>Advanced Networking 1</td>
+                <td class="mark-cell">83</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Networking 2</td>
+                <td class="mark-cell">67</td>
+                <td class="grade-cell"><span class="grade-badge grade-cr">CR</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Programming 1</td>
+                <td class="mark-cell">93</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Software Engineering Fundamentals</td>
+                <td class="mark-cell">80</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Web Programming</td>
+                <td class="mark-cell">93</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Introduction to Programming</td>
+                <td class="mark-cell">91</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Operating Systems Administration</td>
+                <td class="mark-cell">76</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Database Concepts</td>
+                <td class="mark-cell">85</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr class="year-group-row">
+                <td class="year-cell">2024</td>
+                <td>Advanced Networking 2</td>
+                <td class="mark-cell">83</td>
+                <td class="grade-cell"><span class="grade-badge grade-hd">HD</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Unix Essentials for System Administrators</td>
+                <td class="mark-cell">70</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Virtualisation</td>
+                <td class="mark-cell">53</td>
+                <td class="grade-cell"><span class="grade-badge grade-pa">PA</span></td>
+            </tr>
+            <tr>
+                <td class="year-cell"></td>
+                <td>Cyber Security</td>
+                <td class="mark-cell">70</td>
+                <td class="grade-cell"><span class="grade-badge grade-di">DI</span></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<p class="institution-line">RMIT University &nbsp;·&nbsp; Issued 18 July 2025</p>
+
+<footer>
+    <p>&copy; 2025 Josiah Tayi</p>
+    <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</footer>
+</body>
+</html>
